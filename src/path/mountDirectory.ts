@@ -1,4 +1,4 @@
-import * as unixify from 'unixify';
+import unixify from 'unixify';
 import { FS } from '../BaseAsmModule';
 import { isNode } from '../util/isNode';
 import { log } from '../util/logger';

@@ -3,7 +3,7 @@
   "version": "3.0.3",
   "description": "Common interface to load wasm module into isomorphic environment",
   "main": "./dist/cjs/index.js",
-  "module": "./dist/esm/index.js",
+  "module": "./dist-esbuild/index.js",
   "types": "./dist/types/index.d.ts",
   "browser": {
     "./dist/cjs/path/mountDirectory.js": "./dist/cjs/path/mountBuffer.js",
@@ -27,6 +27,7 @@
     "lint": "tslint src/**/*.ts test/**/*.ts --type-check --project tsconfig.json",
     "lint:staged": "lint-staged",
     "build": "tsc -b --verbose ./src/tsconfig.cjs.json ./src/tsconfig.esm.json ./src/tsconfig.types.json ./spec/tsconfig.json",
+    "esbuild": "esbuild --bundle --platform=node src/index.ts --outfile=dist-esbuild/index.js",
     "build:clean": "shx rm -rf ./dist",
     "commit": "git-cz -S",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
@@ -67,6 +68,7 @@
     "typescript": "^3.5.1"
   },
   "dependencies": {
+    "esbuild": "^0.14.30",
     "getroot": "^1.0.0",
     "nanoid": "^2.0.3",
     "unixify": "^1.0.0"
