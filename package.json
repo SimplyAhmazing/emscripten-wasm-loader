@@ -53,6 +53,8 @@
     "commitizen": "^3.1.1",
     "conventional-changelog": "^3.1.8",
     "conventional-changelog-cli": "^2.0.21",
+    "esbuild": "^0.14.30",
+    "esbuild-jest": "^0.5.0",
     "husky": "^2.4.1",
     "jest": "^24.8.0",
     "jest-spin-reporter": "^1.0.2",
@@ -68,7 +70,6 @@
     "typescript": "^3.5.1"
   },
   "dependencies": {
-    "esbuild": "^0.14.30",
     "getroot": "^1.0.0",
     "nanoid": "^2.0.3",
     "unixify": "^1.0.0"

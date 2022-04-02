@@ -8,7 +8,7 @@
       "diagnostics": false
     }
   },
-  "bail": true,
+  "bail": true, 
   "testEnvironment": "node",
   "moduleFileExtensions": [
     "js",
@@ -36,5 +36,8 @@
     "<rootDir>/spec/.*\\.(ts|js)$",
     "<rootDir>/build/.*\\.(ts|js)$",
     "./src/environment.ts"
-  ]
+  ],
+  "transform": {
+    "^.+\\.tsx?$": "esbuild-jest"
+  }
 }

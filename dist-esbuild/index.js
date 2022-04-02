@@ -276,7 +276,7 @@ var mkdirTree = (FS3, dirPath) => {
 // src/path/mountBuffer.ts
 var import_nanoid = __toESM(require_nanoid());
 var mountBuffer = (FS3, memPathId) => (contents, fileName) => {
-  const file = fileName || (0, import_nanoid.default)(45);
+  const file = fileName || (0, import_nanoid.nanoid)(45);
   const mountedFilePath = `${memPathId}/${file}`;
   if (isMounted(FS3, mountedFilePath, "file")) {
     log(`mountTypedArrayFile: file is already mounted, return it`);
