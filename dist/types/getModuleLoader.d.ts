@@ -9,8 +9,8 @@ declare type moduleLoaderType<T> = () => Promise<T>;
  * Initialization options given to `getModuleLoader`
  */
 interface ModuleInitOption {
-    binaryRemoteEndpoint: string;
-    timeout: number;
+  binaryRemoteEndpoint: string;
+  timeout: number;
 }
 /**
  * Type of runtime module function. This is node.js asm module loaded via plain `require`,
@@ -24,7 +24,12 @@ interface ModuleInitOption {
  * ```
  */
 declare type runtimeModuleType = (moduleObject: Record<string, any>) => AsmRuntimeType;
-declare type getModuleLoaderType = <T, R extends AsmRuntimeType>(factoryLoader: (runtime: R) => T, runtimeModule: runtimeModuleType, module?: Record<string, any>, moduleInitOption?: Partial<ModuleInitOption>) => moduleLoaderType<T>;
+declare type getModuleLoaderType = <T, R extends AsmRuntimeType>(
+  factoryLoader: (runtime: R) => T,
+  runtimeModule: runtimeModuleType,
+  module?: Record<string, any>,
+  moduleInitOption?: Partial<ModuleInitOption>
+) => moduleLoaderType<T>;
 /**
  * Creates loader function to load and initialize wasm module.
  *

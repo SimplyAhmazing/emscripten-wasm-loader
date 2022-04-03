@@ -3,7 +3,7 @@
  * `initializeRuntime` is injected via `constructModule` for awaitable module initialization.
  */
 interface AsmRuntimeType {
-    initializeRuntime: (timeout?: number) => Promise<boolean>;
+  initializeRuntime: (timeout?: number) => Promise<boolean>;
 }
 /**
  * @internal
@@ -21,6 +21,9 @@ interface AsmRuntimeType {
  *
  * @returns {Record<string, any>} Augmented object with prefilled interfaces.
  */
-declare const constructModule: (value: Record<string, string>, binaryRemoteEndpoint?: string | undefined) => AsmRuntimeType;
+declare const constructModule: (
+  value: Record<string, string>,
+  binaryRemoteEndpoint?: string | undefined
+) => AsmRuntimeType;
 export { AsmRuntimeType, constructModule };
 //# sourceMappingURL=constructModule.d.ts.map

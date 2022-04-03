@@ -8,6 +8,6 @@ import { FS } from '../BaseAsmModule';
  *
  * @returns {boolean} true if mounted, false otherwise or error occurred
  */
-declare const isMounted: (FS: FS, mountPath: string, type: "dir" | "file") => boolean;
+declare const isMounted: (FS: FS, mountPath: string, type: 'dir' | 'file') => boolean;
 export { isMounted };
 //# sourceMappingURL=isMounted.d.ts.map

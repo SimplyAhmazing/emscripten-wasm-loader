@@ -11,7 +11,10 @@ import { FS } from '../BaseAsmModule';
  * If filename is not provided, it'll be generated automatically. This function checks existing file mounted via filename,
  * does not validate contents of buffer to find out already mounted one.
  */
-declare const mountBuffer: (FS: FS, memPathId: string) => (contents: ArrayBufferView, fileName?: string | undefined) => string;
+declare const mountBuffer: (
+  FS: FS,
+  memPathId: string
+) => (contents: ArrayBufferView, fileName?: string | undefined) => string;
 /**
  * Stub function to support `browser` field in package.json. Do not use.
  *
